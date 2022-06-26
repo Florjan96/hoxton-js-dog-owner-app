@@ -21,7 +21,7 @@ function dogsList(){
     for(let dog of data){
     let dogList=document.createElement('li')
     dogList.className='dogs-list__button'
-    dogList.textContent='Mr.Bonkers'
+    dogList.textContent=dog.name
     dogsUpperList.append(dogList)
     }
 }
@@ -33,5 +33,37 @@ dogsList()
 
 
 
-function displayDog(){}
+function displayDog(){
+    // <h2>Mr. Bonkers</h2>
+    // <img
+    //   src="https://curriculum-content.s3.amazonaws.com/js/woof-woof/dog_1.jpg"
+    //   alt=""
+    // />
+    // <div class="main__dog-section__desc">
+    //   <h3>Bio</h3>
+    //   <p>
+    //     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum,
+    //     minima voluptates libero cumque rerum consequatur optio aliquid sint
+    //     eum maxime illo laborum omnis quo ab rem cupiditate nulla
+    //     perspiciatis ipsum!
+    //   </p>
+    // </div>
+    // <p><em>Is naughty?</em> yes!</p>
+    // <button class="main__dog-section__btn">Good dog!</button>
+
+let dogName=document.createElement('h2')
+let img=document.createElement('img')
+let dogSection=document.createElement('div')
+let Bio=document.createElement('h3')
+let BioContent=document.createElement('p')
+let isNgh=document.createElement('p')
+let button=document.createElement('button')
+
+dogMainSection.append(dogName,img,dogSection,isNgh,button)
+
+dogSection.append(Bio,BioContent)
+
+
+
+}
 
