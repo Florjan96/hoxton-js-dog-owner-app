@@ -10,17 +10,28 @@ console.log(data);
 
 
 
-let dogsUpperList=document.querySelector('dogs-list') 
+let dogsUpperList=document.querySelector('.dogs-list') 
 
-let dogMainSection=document.querySelector("main__dog-section")
+let dogMainSection=document.querySelector(".main__dog-section")
 
 
 function dogsList(){
+    // <li class="dogs-list__button dogs-list__button">Mr.Bunkers</li>
 
+    for(let dog of data){
     let dogList=document.createElement('li')
-    dogList.className='"dogs-list__button'
+    dogList.className='dogs-list__button'
     dogList.textContent='Mr.Bonkers'
-
+    dogsUpperList.append(dogList)
+    }
 }
 
+
+dogsList()
+
+
+
+
+
+function displayDog(){}
 
