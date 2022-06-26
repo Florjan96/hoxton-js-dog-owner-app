@@ -33,7 +33,9 @@ dogsList()
 
 
 
-function displayDog(){
+function displayDog(dog){
+
+    dogMainSection.textContent=""
     // <h2>Mr. Bonkers</h2>
     // <img
     //   src="https://curriculum-content.s3.amazonaws.com/js/woof-woof/dog_1.jpg"
@@ -52,12 +54,31 @@ function displayDog(){
     // <button class="main__dog-section__btn">Good dog!</button>
 
 let dogName=document.createElement('h2')
+dogName.textContent=dog.name
+
 let img=document.createElement('img')
+      img.src="https://curriculum-content.s3.amazonaws.com/js/woof-woof/dog_1.jpg"
+
 let dogSection=document.createElement('div')
+dogSection.className="main__dog-section__desc"
+
+
+
 let Bio=document.createElement('h3')
+Bio.textContent="Bio"
+
 let BioContent=document.createElement('p')
+BioContent.textContent="Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+  
+
 let isNgh=document.createElement('p')
+isNgh.textContent="Is naughty?"
+
+
 let button=document.createElement('button')
+button.className="main__dog-section__btn"
+button.textContent="Good dog!"
+
 
 dogMainSection.append(dogName,img,dogSection,isNgh,button)
 
@@ -67,3 +88,4 @@ dogSection.append(Bio,BioContent)
 
 }
 
+displayDog()
